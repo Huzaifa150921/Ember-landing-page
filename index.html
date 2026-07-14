@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember — Wood-Fire Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ember particle canvas, ambient across whole page -->
+<canvas id="ember-canvas"></canvas>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__mark">Ember</a>
+    <nav class="nav__links" id="nav-links">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Guests</a>
+      <a href="#reserve">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#reserve" class="btn btn--ember nav__cta">Reserve a table</a>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__glow"></div>
+  <div class="hero__content reveal">
+    <p class="eyebrow">Est. 2019 — Live-Fire Kitchen</p>
+    <h1 class="hero__title">Cooked over<br>open flame.</h1>
+    <p class="hero__sub">Ember is a hearth-driven restaurant where every dish passes through
+      wood smoke and live coals before it reaches your table. No gas, no shortcuts — just
+      oak, cherry, and hickory, burning at 550°F since sundown.</p>
+    <div class="hero__actions">
+      <a href="#reserve" class="btn btn--ember">Reserve a table</a>
+      <a href="#menu" class="btn btn--ghost">View the menu</a>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <span></span>
+    <p>Scroll</p>
+  </div>
+</section>
+
+<!-- ============ 2. PHILOSOPHY ============ -->
+<section class="philosophy" id="philosophy">
+  <div class="section__inner philosophy__grid">
+    <div class="philosophy__text reveal">
+      <p class="eyebrow">Our Philosophy</p>
+      <h2 class="section__title">One heat source. <br>Zero shortcuts.</h2>
+      <p class="section__body">There is no gas line in our kitchen. Every plate that leaves it —
+        the bread, the vegetables, the fish, the fat rendered for the sauce — has spent time
+        over live coals. It's slower. It's harder to control. It's also the only way we know
+        how to get flavor that a dial can't replicate.</p>
+      <p class="section__body">Our chefs read the fire the way a sommelier reads a vintage:
+        by color, by crackle, by the smoke it throws. Three woods, three temperaments,
+        one hearth built into the center of the room so you can watch it happen.</p>
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat__num">550°F</span>
+          <span class="stat__label">Hearth Temp</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">03</span>
+          <span class="stat__label">Wood Types</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">14hr</span>
+          <span class="stat__label">Coal Prep</span>
+        </div>
+      </div>
+    </div>
+    <div class="philosophy__visual reveal">
+      <svg viewBox="0 0 320 420" class="hearth-svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="coalGlow" cx="50%" cy="85%" r="60%">
+            <stop offset="0%" stop-color="#FF7A45" stop-opacity="0.9"/>
+            <stop offset="45%" stop-color="#E8542A" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#E8542A" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="archFade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2A241D"/>
+            <stop offset="100%" stop-color="#1C1712"/>
+          </linearGradient>
+        </defs>
+        <path d="M20 420 V180 A140 140 0 0 1 300 180 V420 Z" fill="url(#archFade)" stroke="#3A322A" stroke-width="2"/>
+        <ellipse cx="160" cy="400" rx="260" ry="60" fill="url(#coalGlow)"/>
+        <g class="coals">
+          <rect x="110" y="360" width="34" height="18" rx="6" fill="#E8542A"/>
+          <rect x="150" y="368" width="44" height="16" rx="6" fill="#FF7A45"/>
+          <rect x="190" y="358" width="30" height="20" rx="6" fill="#C9A227"/>
+          <rect x="130" y="380" width="26" height="14" rx="6" fill="#E8542A"/>
+          <rect x="170" y="382" width="34" height="12" rx="6" fill="#FF7A45"/>
+        </g>
+        <g class="flame-flicker" fill="#FF7A45" opacity="0.85">
+          <path d="M160 300 C150 330 170 340 160 365 C185 350 190 320 165 295 C168 305 158 305 160 300Z"/>
+          <path d="M130 320 C124 340 136 348 130 362 C146 352 150 332 132 315 C134 322 129 322 130 320Z" opacity="0.7"/>
+          <path d="M195 322 C189 340 199 348 195 360 C210 350 214 334 197 318 C199 324 194 324 195 322Z" opacity="0.7"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. MENU ============ -->
+<section class="menu" id="menu">
+  <div class="section__inner">
+    <div class="menu__head reveal">
+      <p class="eyebrow">The Menu</p>
+      <h2 class="section__title">Signature dishes</h2>
+      <p class="section__body section__body--center">A rotating selection built around what the
+        fire does best, tagged by the wood that shapes its flavor.</p>
+    </div>
+    <div class="menu__grid">
+
+      <article class="dish reveal">
+        <div class="dish__art dish__art--1"><span class="dish__wisp"></span></div>
+        <div class="dish__info">
+          <span class="dish__wood">Oak</span>
+          <h3 class="dish__name">Charred Octopus</h3>
+          <p class="dish__desc">Slow-coaled octopus, smoked paprika oil, charred lemon, crisp potato.</p>
+          <span class="dish__price">$28</span>
+        </div>
+      </article>
+
+      <article class="dish reveal">
+        <div class="dish__art dish__art--2"><span class="dish__wisp"></span></div>
+        <div class="dish__info">
+          <span class="dish__wood">Cherry</span>
+          <h3 class="dish__name">Cherrywood Duck Breast</h3>
+          <p class="dish__desc">Dry-aged duck, blistered cherries, smoked jus, charcoal salt.</p>
+          <span class="dish__price">$36</span>
+        </div>
+      </article>
+
+      <article class="dish reveal">
+        <div class="dish__art dish__art--3"><span class="dish__wisp"></span></div>
+        <div class="dish__info">
+          <span class="dish__wood">Hickory</span>
+          <h3 class="dish__name">Hearth-Fired Ribeye</h3>
+          <p class="dish__desc">28-day dry-aged, ember-rendered fat, roasted bone marrow butter.</p>
+          <span class="dish__price">$54</span>
+        </div>
+      </article>
+
+      <article class="dish reveal">
+        <div class="dish__art dish__art--4"><span class="dish__wisp"></span></div>
+        <div class="dish__info">
+          <span class="dish__wood">Oak</span>
+          <h3 class="dish__name">Live-Fire Cauliflower</h3>
+          <p class="dish__desc">Whole roasted cauliflower, smoked tahini, chili oil, charred herbs.</p>
+          <span class="dish__price">$22</span>
+        </div>
+      </article>
+
+      <article class="dish reveal">
+        <div class="dish__art dish__art--5"><span class="dish__wisp"></span></div>
+        <div class="dish__info">
+          <span class="dish__wood">Cherry</span>
+          <h3 class="dish__name">Smoked Burrata</h3>
+          <p class="dish__desc">Hearth-warmed burrata, charred stone fruit, hot honey, toasted sourdough.</p>
+          <span class="dish__price">$19</span>
+        </div>
+      </article>
+
+      <article class="dish reveal">
+        <div class="dish__art dish__art--6"><span class="dish__wisp"></span></div>
+        <div class="dish__info">
+          <span class="dish__wood">Hickory</span>
+          <h3 class="dish__name">Coal-Roasted Salmon</h3>
+          <p class="dish__desc">Whole-side salmon, embered fennel, brown butter, smoked citrus.</p>
+          <span class="dish__price">$32</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="section__inner">
+    <div class="gallery__head reveal">
+      <p class="eyebrow">Inside Ember</p>
+      <h2 class="section__title">The room, the hearth, the plate</h2>
+    </div>
+  </div>
+  <div class="gallery__grid reveal">
+    <div class="gallery__tile gallery__tile--wide gtile-1">
+      <div class="gallery__caption"><span>The Hearth</span>Center of the dining room</div>
+    </div>
+    <div class="gallery__tile gtile-2">
+      <div class="gallery__caption"><span>Coal Bed</span>Fourteen hours to temperature</div>
+    </div>
+    <div class="gallery__tile gtile-3">
+      <div class="gallery__caption"><span>The Pass</span>Where every plate is finished</div>
+    </div>
+    <div class="gallery__tile gtile-4">
+      <div class="gallery__caption"><span>Dining Room</span>Forty covers, low light</div>
+    </div>
+    <div class="gallery__tile gallery__tile--wide gtile-5">
+      <div class="gallery__caption"><span>Wood Store</span>Oak, cherry, hickory, seasoned on-site</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="section__inner">
+    <p class="eyebrow reveal">Guests</p>
+    <h2 class="section__title reveal">What the room says</h2>
+    <div class="quote-carousel reveal">
+      <div class="quote-track" id="quote-track">
+        <blockquote class="quote is-active">
+          <p>"The ribeye tasted like it had a story. You could smell the cherrywood
+            before the plate even hit the table."</p>
+          <cite>— Naila R., regular guest</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>"Watching the hearth from our table was half the meal. The other half
+            was the octopus. Booking again before we'd finished dessert."</p>
+          <cite>— Farhan A., first visit</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>"Smoked burrata is the best opening dish I've had this year, and I say
+            that having eaten at a lot of openings."</p>
+          <cite>— Sana K., food writer</cite>
+        </blockquote>
+      </div>
+      <div class="quote-dots" id="quote-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. RESERVATION ============ -->
+<section class="reserve" id="reserve">
+  <div class="section__inner reserve__grid">
+    <div class="reserve__info reveal">
+      <p class="eyebrow">Reservations</p>
+      <h2 class="section__title">Save a seat<br>by the fire.</h2>
+      <p class="section__body">Tables turn slowly at Ember — we'd rather cook one course
+        right than three courses fast. Book ahead, especially for weekend hearth-side seating.</p>
+      <ul class="hours-list">
+        <li><span>Tue – Thu</span><span>5:30pm – 10:00pm</span></li>
+        <li><span>Fri – Sat</span><span>5:30pm – 11:30pm</span></li>
+        <li><span>Sun</span><span>5:00pm – 9:00pm</span></li>
+        <li><span>Mon</span><span>Closed</span></li>
+      </ul>
+    </div>
+    <form class="reserve__form reveal" id="reserve-form">
+      <div class="form-row">
+        <label for="r-name">Name</label>
+        <input type="text" id="r-name" name="name" placeholder="Your full name" required>
+      </div>
+      <div class="form-row form-row--split">
+        <div>
+          <label for="r-date">Date</label>
+          <input type="date" id="r-date" name="date" required>
+        </div>
+        <div>
+          <label for="r-time">Time</label>
+          <input type="time" id="r-time" name="time" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="r-guests">Party size</label>
+        <select id="r-guests" name="guests" required>
+          <option value="">Select guests</option>
+          <option>1 guest</option>
+          <option>2 guests</option>
+          <option>3 guests</option>
+          <option>4 guests</option>
+          <option>5+ guests</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="r-notes">Notes (optional)</label>
+        <input type="text" id="r-notes" name="notes" placeholder="Allergies, occasions, seating requests">
+      </div>
+      <button type="submit" class="btn btn--ember reserve__submit">Confirm reservation</button>
+      <p class="reserve__success" id="reserve-success">Thank you — your table request has been sent.
+        We'll confirm by email shortly.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 7. FOOTER / CONTACT ============ -->
+<footer class="footer" id="contact">
+  <div class="section__inner footer__grid">
+    <div class="footer__brand">
+      <a href="#top" class="nav__mark">Ember</a>
+      <p>124 Foundry Lane, Karachi</p>
+      <p>+92 21 5551 0198</p>
+      <p>hello@embertable.com</p>
+    </div>
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reserve">Reservations</a>
+    </div>
+    <div class="footer__col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Journal</a>
+    </div>
+  </div>
+  <div class="section__inner footer__bottom">
+    <p>© 2026 Ember Restaurant. All rights reserved.</p>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
